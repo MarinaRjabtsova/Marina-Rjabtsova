@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kaugekaja OU — Health & Personal Care Retailers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#fbfaf8;
+      --fg:#2b2a2a;
+      --muted:#6e6b67;
+      --brand:#8b6b3e; /* soe kuldpruun aktsent */
+      --card:#ffffff;
+      --line:#ece9e3;
+    }
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--fg);background:var(--bg)}
+    .container{max-width:1100px;margin-inline:auto;padding:0 20px}
+    header{position:sticky;top:0;background:rgba(251,250,248,.8);backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid var(--line);z-index:20}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .logo{font-family:"Playfair Display",serif;font-weight:700;font-size:20px;letter-spacing:.2px}
+    .logo span{color:var(--brand)}
+    nav a{margin-left:18px;text-decoration:none;color:var(--fg);font-weight:500}
+    nav a:hover{color:var(--brand)}
+
+    /* Hero */
+    .hero{position:relative}
+    .hero-wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;padding:56px 0}
+    .hero-card{background:linear-gradient(180deg,#fff, #f6f2ec);border:1px solid var(--line);border-radius:24px;padding:36px}
+    .eyebrow{color:var(--brand);font-weight:600;letter-spacing:.5px;text-transform:uppercase;font-size:12px}
+    h1{font-family:"Playfair Display",serif;font-weight:700;line-height:1.1;margin:.35em 0;font-size:44px}
+    .lead{font-size:18px;color:var(--muted)}
+    .hero-aside{border-radius:24px;overflow:hidden;border:1px solid var(--line)}
+    .hero-aside img{display:block;width:100%;height:100%;object-fit:cover}
+    .cta{display:inline-flex;align-items:center;gap:10px;margin-top:22px;padding:12px 18px;border-radius:999px;background:var(--brand);color:#fff;text-decoration:none;font-weight:600}
+
+    /* Sections */
+    section{padding:64px 0}
+    .section-title{display:flex;align-items:end;justify-content:space-between;margin-bottom:26px}
+    .section-title h2{font-family:"Playfair Display",serif;font-size:32px;margin:0}
+    .section-title p{color:var(--muted);max-width:640px;margin:8px 0 0}
+
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+
+    .card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px}
+    .card h3{margin:0 0 8px;font-size:20px}
+    .card p{margin:0;color:var(--muted)}
+
+    .badge{display:inline-block;background:#efe7db;color:#7a5b2c;font-weight:600;border-radius:999px;padding:6px 10px;font-size:12px;margin-bottom:8px}
+
+    .step{position:relative;padding-left:46px}
+    .step::before{content:attr(data-step);position:absolute;left:0;top:0;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:#eee3d4;color:#6b4b1e;font-weight:700}
+
+    /* Contact */
+    form{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    form .full{grid-column:1/-1}
+    label{font-weight:600;font-size:14px}
+    input,textarea,select{width:100%;margin-top:6px;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:#fff;font:inherit}
+    textarea{min-height:130px;resize:vertical}
+    .helper{font-size:12px;color:var(--muted);margin-top:6px}
+    .submit{justify-self:start;border:none}
+
+    /* Footer */
+    footer{border-top:1px solid var(--line);padding:32px 0;color:var(--muted)}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .hero-wrap{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:1fr}
+      .grid-2{grid-template-columns:1fr}
+      form{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="logo"><span>Kaugekaja</span> OU</div>
+      <nav>
+        <a href="#hero">Avaleht</a>
+        <a href="#about">Meist</a>
+        <a href="#services">Teenused</a>
+        <a href="#benefits">Eelised</a>
+        <a href="#process">Protsess</a>
+        <a href="#contact">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 1. Hero -->
+  <section id="hero" class="hero">
+    <div class="container hero-wrap">
+      <div class="hero-card">
+        <div class="eyebrow">Tervise- ja isikliku hoolduse jaemüük</div>
+        <h1>Lihtsus, mis toetab sinu heaolu</h1>
+        <p class="lead">Kaugekaja OU toob Eesti turule hoolikalt kureeritud valiku tervise, hügieeni ja heaolu tooteid. Selged kirjeldused, usaldusväärne päritolu ja kiire teenindus — et õige toode jõuaks sinuni ilma keerukusteta.</p>
+        <a class="cta" href="#contact">Võta meiega ühendust</a>
+      </div>
+      <div class="hero-aside" aria-hidden="true">
+        <!-- Замени локальный путь на веб-картинку или относительный путь в проекте -->
+        <img src="C:\сайты\5692d3267c4b0499fc206a8a5f3cbd86.jpg"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. About -->
+  <section id="about">
+    <div class="container">
+      <div class="section-title">
+        <h2>Tutvu meie looga</h2>
+        <p>Oleme Eesti jaemüüja, kes keskendub tervise- ja isikliku hoolduse toodetele. Meie eesmärk on teha kvaliteetsed ja turvalised tooted kättesaadavaks nii perele kui ka professionaalidele, pakkudes läbipaistvat infot ja nõu.</p>
+      </div>
+      <div class="card">
+        <p>
+          Kaugekaja OU ühendab usaldusväärsed tootjad ja teadlikud tarbijad. Teeme koostööd sertifitseeritud partneritega, kontrollime partiide jälgitavust ja avaldame arusaadavad koostisosade kirjeldused. Meie klienditugi aitab valida sobiva lahenduse nii igapäevaseks hügieeniks kui ka sihipäraseks nahahoolduseks. Hoiame laovarud stabiilsed ning tagame kiire tarne üle Eesti. Meie jaoks on oluline, et iga ost toetaks sinu tervist ja looks pikaajalist väärtust.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Services -->
+  <section id="services">
+    <div class="container">
+      <div class="section-title">
+        <h2>Mida me teeme</h2>
+        <p>Pakume terviklikku valikut toodetest ja toe-teenustest, mis katavad igapäevased vajadused ning spetsiaalse hoolduse.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <div class="badge">Tervisetooted</div>
+          <h3>Apteegi- ja tervisekaup</h3>
+          <p>Vitamiinid, toidulisandid, vahendid külmetuse, allergia ja seede toetuseks. Kõik tooted on pärit auditeeritud tarnijatelt ning vastavad EL nõuetele. Aitame valida tooted, mis sobivad sinu rutiini ja elustiiliga.</p>
+        </div>
+        <div class="card">
+          <div class="badge">Isiklik hooldus</div>
+          <h3>Ilu & hügieen</h3>
+          <p>Nahahooldus, juuksehooldus, suuhügieen ja intiimhooldus. Paneme rõhku õrnadele koostistele ja tõhusatele valemitele. Toodete kirjeldused selgitavad mõju, kasutust ja sobivust tundlikule nahale.</p>
+        </div>
+        <div class="card">
+          <div class="badge">Heaolu</div>
+          <h3>Kodune heaolu & teraapia</h3>
+          <p>Aroomiteraapia, massaaži- ja taastumisvahendid, ergonoomilised abivahendid. Kujundame mugava valiku, mis toetab und, stressi leevendust ja igapäevast energiataset. Soovitused põhinevad tõendatud praktikatel.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Benefits -->
+  <section id="benefits">
+    <div class="container">
+      <div class="section-title">
+        <h2>Miks valida Kaugekaja</h2>
+        <p>Meie lubadus on ühendus kvaliteedi, selguse ja sujuva teeninduse vahel.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Kvaliteet ja vastavus</h3>
+          <p>Iga toote taust kontrollitakse: sertifikaadid, päritolu, partii jälgitavus. Teeme koostööd partneritega, kes järgivad GMP ja EL ohutusnõudeid.</p>
+        </div>
+        <div class="card">
+          <h3>Läbipaistev teave</h3>
+          <p>Selged koostisosad, kasutusjuhendid ja võrdlevad soovitused. Aitame mõista, miks üks lahendus võib sinu jaoks paremini töötada kui teine.</p>
+        </div>
+        <div class="card">
+          <h3>Kiire logistika & tugi</h3>
+          <p>Stabiilne laoseis ja nutikad tarnevõimalused üle Eesti. Pärast ostu on olemas järelteenindus: tagasiside, vahetus ja nõustamine.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Process -->
+  <section id="process">
+    <div class="container">
+      <div class="section-title">
+        <h2>Kuidas me töötame</h2>
+        <p>Kolm sammu, et õige toode jõuaks sinuni kindlalt ja kiiresti.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card step" data-step="1">
+          <h3>Nõustamine</h3>
+          <p>Kuulame sinu vajadused ja olud. Soovitame sobiva kategooria ning selgitame koostisosade mõju ja kasutust. Vajadusel anname alternatiive tundliku naha või dieedipiirangute korral.</p>
+        </div>
+        <div class="card step" data-step="2">
+          <h3>Valik & tellimus</h3>
+          <p>Koostame ostukorvi ja kinnitame tarne. Saad ühtlase ülevaate hinnast, tarneajast ja tagastusreeglitest. Kõik materjalid on eesti keeles ning arusaadavad.</p>
+        </div>
+        <div class="card step" data-step="3">
+          <h3>Kohaletoimetus & järelhooldus</h3>
+          <p>Tarnime kiiresti ja turvaliselt. Pärast kättesaamist kontrollime rahulolu, jagame kasutusnõu ja vajadusel aitame garantiiküsimustega.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Contact Form -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-title">
+        <h2>Räägime sinu vajadustest</h2>
+        <p>Täida vorm – vastame tööpäeviti võimalikult kiiresti. Kui soovid, lisa ka lühike kirjeldus oma murest või eesmärgist.</p>
+      </div>
+      <div class="card">
+
+        <!-- РАБОТАЮЩАЯ ФОРМА -->
+        <form action="https://formsubmit.co/marinarjabtsova@kaugekaja.info" method="POST">
+          <!-- служебные поля FormSubmit -->
+          <input type="hidden" name="_subject" value="Uus päring — Kaugekaja OU">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://kaugekaja.ee/thank-you.html">
+          <input type="text" name="_honey" style="display:none">
+
+          <div>
+            <label for="name">Ees- ja perekonnanimi</label>
+            <input id="name" name="name" type="text" placeholder="nt. Mari Maasikas" required>
+          </div>
+          <div>
+            <label for="company">Ettevõte (soovi korral)</label>
+            <input id="company" name="company" type="text" placeholder="nt. OÜ Näide">
+          </div>
+          <div>
+            <label for="email">E-post</label>
+            <input id="email" name="email" type="email" placeholder="nimi@e-post.ee" required>
+          </div>
+          <div>
+            <label for="phone">Telefon</label>
+            <input id="phone" name="phone" type="tel" placeholder="nt. +372 5555 5555">
+          </div>
+          <div class="full">
+            <label for="topic">Teema</label>
+            <input id="topic" name="topic" type="text" placeholder="Milles vajate abi või millist toodet otsite?">
+          </div>
+          <div class="full">
+            <label for="message">Sõnum</label>
+            <textarea id="message" name="message" placeholder="Kirjelda oma vajadust, naha- või juuksetüüpi, allergiaid vms."></textarea>
+            <div class="helper">Saates vormi kinnitad, et nõustud privaatsustingimustega ja annad loa meiepoolseks tagasisideks.</div>
+          </div>
+          <button class="cta submit" type="submit">Saada päring</button>
+        </form>
+        <!-- /ФОРМА -->
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Contacts -->
+  <footer>
+    <div class="container">
+      <div style="display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between">
+        <div>
+          <strong>Kaugekaja OU</strong><br>
+          Tartu mnt 87, 10112 Tallinn<br>
+          <a href="mailto:marinarjabtsova@kaugekaja.info">marinarjabtsova@kaugekaja.info</a>
+        </div>
+        <div>&copy; <span id="y"></span> Kaugekaja OU — Health & Personal Care Retailers</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
